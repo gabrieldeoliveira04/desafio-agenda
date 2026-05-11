@@ -1,57 +1,101 @@
-# DIO - Trilha .NET - API e Entity Framework
-www.dio.me
+# Task Management API
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de API e Entity Framework, da trilha .NET da DIO.
+API desenvolvida como parte do desafio prático da trilha .NET da DIO, com foco na construção de uma aplicação CRUD utilizando ASP.NET Core, Entity Framework e banco de dados relacional.
 
-## Contexto
-Você precisa construir um sistema gerenciador de tarefas, onde você poderá cadastrar uma lista de tarefas que permitirá organizar melhor a sua rotina.
+O projeto consiste em um sistema gerenciador de tarefas, permitindo cadastrar, atualizar, consultar e remover tarefas através de endpoints REST documentados com Swagger.
 
-Essa lista de tarefas precisa ter um CRUD, ou seja, deverá permitir a você obter os registros, criar, salvar e deletar esses registros.
+Durante o desenvolvimento foram aplicados conceitos de Web API, Entity Framework Core, migrations, manipulação de dados e arquitetura backend em .NET.
 
-A sua aplicação deverá ser do tipo Web API ou MVC, fique a vontade para implementar a solução que achar mais adequado.
+## Objetivo do Projeto
 
-A sua classe principal, a classe de tarefa, deve ser a seguinte:
+O principal objetivo do projeto foi praticar o desenvolvimento de APIs RESTful utilizando .NET e Entity Framework, implementando operações CRUD completas e integração com banco de dados.
 
-![Diagrama da classe Tarefa](diagrama.png)
+Além disso, o desafio também teve como foco a utilização de boas práticas de desenvolvimento backend e documentação de endpoints.
 
-Não se esqueça de gerar a sua migration para atualização no banco de dados.
+## Tecnologias Utilizadas
 
-## Métodos esperados
-É esperado que você crie o seus métodos conforme a seguir:
+* ASP.NET Core
+* .NET
+* Entity Framework Core
+* C#
+* SQL Server
+* Swagger/OpenAPI
+* REST API
+* Git/GitHub
 
+## Funcionalidades
 
-**Swagger**
+### Gerenciamento de Tarefas
 
+* Cadastro de tarefas
+* Atualização de tarefas
+* Remoção de tarefas
+* Consulta de tarefas por ID
+* Listagem de todas as tarefas
 
-![Métodos Swagger](swagger.png)
+### Filtros de Consulta
 
+* Busca por título
+* Busca por data
+* Busca por status
 
-**Endpoints**
+### Documentação da API
 
+* Swagger/OpenAPI para visualização e testes de endpoints
+* Estrutura RESTful para comunicação entre cliente e servidor
 
-| Verbo  | Endpoint                | Parâmetro | Body          |
-|--------|-------------------------|-----------|---------------|
-| GET    | /Tarefa/{id}            | id        | N/A           |
-| PUT    | /Tarefa/{id}            | id        | Schema Tarefa |
-| DELETE | /Tarefa/{id}            | id        | N/A           |
-| GET    | /Tarefa/ObterTodos      | N/A       | N/A           |
-| GET    | /Tarefa/ObterPorTitulo  | titulo    | N/A           |
-| GET    | /Tarefa/ObterPorData    | data      | N/A           |
-| GET    | /Tarefa/ObterPorStatus  | status    | N/A           |
-| POST   | /Tarefa                 | N/A       | Schema Tarefa |
+## Endpoints Implementados
 
-Esse é o schema (model) de Tarefa, utilizado para passar para os métodos que exigirem
+* GET `/Tarefa/{id}`
+* PUT `/Tarefa/{id}`
+* DELETE `/Tarefa/{id}`
+* GET `/Tarefa/ObterTodos`
+* GET `/Tarefa/ObterPorTitulo`
+* GET `/Tarefa/ObterPorData`
+* GET `/Tarefa/ObterPorStatus`
+* POST `/Tarefa`
 
-```json
-{
-  "id": 0,
-  "titulo": "string",
-  "descricao": "string",
-  "data": "2022-06-08T01:31:07.056Z",
-  "status": "Pendente"
-}
-```
+## Banco de Dados
+
+O projeto utiliza Entity Framework Core para persistência de dados, incluindo:
+
+* Configuração de DbContext
+* Criação de migrations
+* Atualização automática da estrutura do banco
+* Mapeamento da entidade Tarefa
+
+## Estrutura da Entidade
+
+A entidade principal do sistema contém:
+
+* Id
+* Título
+* Descrição
+* Data
+* Status
+
+## Conceitos Aplicados
+
+* Desenvolvimento de APIs REST
+* CRUD com Entity Framework Core
+* Migrations
+* Manipulação de banco de dados
+* Arquitetura backend em .NET
+* Documentação de APIs com Swagger
+* Organização de controllers e models
+* Persistência de dados
+
+## Aprendizados
+
+Durante o desenvolvimento do projeto foram aplicados conceitos relacionados a:
+
+* Construção de APIs utilizando ASP.NET Core
+* Integração com banco de dados utilizando Entity Framework
+* Criação de endpoints RESTful
+* Estruturação de projetos backend
+* Manipulação de migrations
+* Documentação e testes de APIs com Swagger
+
 
 
 ## Solução
